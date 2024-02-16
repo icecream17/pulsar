@@ -1,4 +1,4 @@
-// This is loaded by atom-environment.coffee. See
+// This is loaded by atom-environment.js. See
 // https://atom.io/docs/api/latest/Config for more information about config TODO: Link to Pulsar API site when documented
 // schemas.
 const configSchema = {

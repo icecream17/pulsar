@@ -72,6 +72,17 @@ class PaneElement extends HTMLElement {
     this.addEventListener('drop', handleDrop);
   }
 
+  // Private: Sets up callbacks when PaneElement initializes.
+  //
+  // As of February 2024, the only call is from `pane.js`:
+  // > ctrl+f `createPaneElement().initialize`
+  //
+  // * `model` The container {Pane}.
+  // * An {Object} with the following keys:
+  //   * `views` A {ViewRegistry} used to manage the presentation of the item.
+  //   * `applicationDelegate` An {ApplicationDelegate} used to open file paths.
+  //
+  // Returns this {PaneElement}.
   initialize(model, { views, applicationDelegate }) {
     this.model = model;
     this.views = views;
